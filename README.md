@@ -90,7 +90,8 @@ Flask-WTF
 
 email-validator
 
-📝 Autores
+📝 Autores:
+
 Noel Yadiel Cordero Rivera
 
 Profesor: Javier Dastas
