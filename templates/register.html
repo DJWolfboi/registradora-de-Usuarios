@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Registrar</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    <p>{{ form.nombre.label }}<br>
+    {{ form.nombre(size=32) }}<br>
+    {% for error in form.nombre.errors %}
+      <span style="color:red">{{ error }}</span>
+    {% endfor %}</p>
+
+    <p>{{ form.correo.label }}<br>
+    {{ form.correo(size=32) }}<br>
+    {% for error in form.correo.errors %}
+      <span style="color:red">{{ error }}</span>
+    {% endfor %}</p>
+
+    <p>{{ form.contraseña.label }}<br>
+    {{ form.contraseña(size=32) }}<br>
+    {% for error in form.contraseña.errors %}
+      <span style="color:red">{{ error }}</span>
+    {% endfor %}</p>
+
+    <p>{{ form.enviar() }}</p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% for category, message in messages %}
+        <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endwith %}
+  </form>
+{% endblock %}
