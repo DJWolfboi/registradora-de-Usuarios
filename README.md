@@ -92,5 +92,6 @@ email-validator
 
 📝 Autores
 Noel Yadiel Cordero Rivera
+
 Profesor: Javier Dastas
 
